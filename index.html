@@ -1,0 +1,102 @@
+<!DOCTYPE html><html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Hacker Cat – English for Systems Engineering</title>
+  <style>
+    body {
+      background-color: #0b0b0b;
+      color: #00ff9c;
+      font-family: 'Courier New', monospace;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background: #000;
+      padding: 20px;
+      text-align: center;
+      border-bottom: 2px solid #00ff9c;
+    }
+    h1 {
+      margin: 0;
+    }
+    main {
+      padding: 20px;
+      max-width: 800px;
+      margin: auto;
+    }
+    .terminal {
+      background: #111;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px #00ff9c;
+    }
+    .question {
+      margin-bottom: 15px;
+    }
+    input[type="text"] {
+      width: 100%;
+      padding: 10px;
+      background: #000;
+      color: #00ff9c;
+      border: 1px solid #00ff9c;
+      border-radius: 4px;
+    }
+    button {
+      margin-top: 10px;
+      padding: 10px 20px;
+      background: #00ff9c;
+      color: #000;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+    button:hover {
+      background: #00cc7a;
+    }
+    .result {
+      margin-top: 15px;
+      font-weight: bold;
+    }
+    footer {
+      text-align: center;
+      padding: 10px;
+      font-size: 12px;
+      color: #888;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>🐱‍💻 Hacker Cat</h1>
+    <p>Aprende inglés técnico programando</p>
+  </header>  <main>
+    <div class="terminal">
+      <div class="question">
+        <p><strong>Mission 1:</strong> Complete the command</p>
+        <p>In English, how do you say:</p>
+        <p><em>"Imprime el mensaje en la consola"</em></p>
+        <p><code>_____ a message to the console</code></p>
+      </div><input type="text" id="answer" placeholder="Type your answer here..." />
+  <button onclick="checkAnswer()">Run</button>
+
+  <div class="result" id="result"></div>
+</div>
+
+  </main>  <footer>
+    <p>Hacker Cat © 2026 – English for Systems Engineering</p>
+  </footer>  <script>
+    function checkAnswer() {
+      const userAnswer = document.getElementById('answer').value.toLowerCase().trim();
+      const result = document.getElementById('result');
+
+      if (userAnswer === 'print') {
+        result.textContent = '✅ Access granted! Well done, hacker.';
+        result.style.color = '#00ff9c';
+      } else {
+        result.textContent = '❌ Access denied. Try again.';
+        result.style.color = '#ff4c4c';
+      }
+    }
+  </script></body>
+</html>
